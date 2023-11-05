@@ -6,6 +6,7 @@ import Register from "../../Pages/Register/Register";
 import Blog from "../../Pages/Blog/Blog";
 import AllFood from "../../Pages/AllFood/AllFood";
 import CardDetails from "../../Pages/CardDetails/CardDetails";
+import AddFoodItem from "../../Pages/AddFoodItem/AddFoodItem";
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
           element: <CardDetails></CardDetails>,
           loader: ({params})=> fetch(`http://localhost:5000/api/v1/items/${params.id}`)
           
+        },
+        {
+          path: '/add-food-item',
+          element: <AddFoodItem></AddFoodItem>
         }
       ]
     },

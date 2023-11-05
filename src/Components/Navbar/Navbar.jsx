@@ -6,6 +6,7 @@ const Navbar = () => {
         <li><NavLink to="/all-food" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>All Food</NavLink></li>
         <li><NavLink to="/blog" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Blog</NavLink></li>
         <li><NavLink to="/login" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Login</NavLink></li>
+        <li><NavLink to="/add-food-item" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>add food item</NavLink></li>
     </>
     return (
         <div className="navbar max-w-screen-xl mx-auto md:px-10">
