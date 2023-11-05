@@ -2,7 +2,8 @@
 const Banner = () => {
     return (
 
-        <div className="carousel w-full rounded-lg">
+        <div className="max-w-screen-xl mx-auto md:px-10">
+            <div className="carousel w-full rounded-lg">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src="/src/assets/images/banner1.png" className="w-full" />
                 <div className="absolute rounded-xl flex items-center left-[25%] right-[25%] z-10 h-full  top-0 ">
@@ -14,7 +15,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" absolute inset-0 bg-gradient-to-r from-[#2e3130] to-[rgba(21, 21, 21, 0)]">
+                <div className=" absolute inset-0 bg-[#2e3130] opacity-70">
 
                 </div>
                 <div className="absolute   flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -33,7 +34,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" absolute inset-0 bg-gradient-to-r from-[#2e3130] to-[rgba(21, 21, 21, 0)]">
+                <div className=" absolute inset-0 bg-[#2e3130] opacity-70">
 
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -52,7 +53,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" absolute inset-0 bg-gradient-to-r from-[#2e3130] to-[rgba(21, 21, 21, 0)]">
+                <div className=" absolute inset-0 bg-[#2e3130] opacity-70">
 
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -71,7 +72,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" absolute inset-0 bg-gradient-to-r from-[#2e3130] to-[rgba(21, 21, 21, 0)]">
+                <div className=" absolute inset-0 bg-[#2e3130] opacity-70">
 
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -79,6 +80,7 @@ const Banner = () => {
                     <a href="#slide1" className="btn btn-circle">❯</a>
                 </div>
             </div>
+        </div>
         </div>
 
     );

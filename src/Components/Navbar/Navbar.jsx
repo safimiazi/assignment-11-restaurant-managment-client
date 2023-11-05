@@ -5,9 +5,10 @@ const Navbar = () => {
         <li><NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Home</NavLink></li>
         <li><NavLink to="/all-food" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>All Food</NavLink></li>
         <li><NavLink to="/blog" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Blog</NavLink></li>
+        <li><NavLink to="/login" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Login</NavLink></li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar max-w-screen-xl mx-auto md:px-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -17,7 +18,7 @@ const Navbar = () => {
                         {NavList}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <img src="/src/assets/images/logo-dark.png" alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -25,7 +26,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="btn">Login</button>
+            
             </div>
         </div>
     );
