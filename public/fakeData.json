@@ -1,162 +1,202 @@
 [
-    {
-      "myID": 1,
-      "FoodName": "Burger",
-      "FoodImage": "https://i.ibb.co/9gsH0Tc/burger.jpg",
-      "FoodCategory": "Fast Food",
-      "Price": 5.99,
-      "Count": 0
-    },
-    {
-      "myID": 2,
-      "FoodName": "Pizza",
-      "FoodImage": "https://i.ibb.co/wgV0gLn/ivan-torres-MQUqbmsz-GGM-unsplash.jpg",
-      "FoodCategory": "Italian",
-      "Price": 8.99,
-      "Count": 0
-    },
-    {
-      "myID": 3,
-      "FoodName": "Sushi",
-      "FoodImage": "https://i.ibb.co/jMT6wJj/riccardo-bergamini-O2y-Nz-Xdq-Ou0-unsplash.jpg",
-      "FoodCategory": "Japanese",
-      "Price": 12.99,
-      "Count": 0
-    },
-    {
-      "myID": 4,
-      "FoodName": "Pasta",
-      "FoodImage": "https://i.ibb.co/pyfWmP1/ben-lei-fl-Fd8-L7-B3g-unsplash.jpg",
-      "FoodCategory": "Italian",
-      "Price": 10.49,
-      "Count": 0
-    },
-    {
-      "myID": 5,
-      "FoodName": "Ice Cream",
-      "FoodImage": "https://i.ibb.co/YcHpcLq/lama-roscu-Wpg3-Qm0za-Gk-unsplash.jpg",
-      "FoodCategory": "Dessert",
-      "Price": 4.99,
-      "Count": 0
-    },
-    {
-      "myID": 6,
-      "FoodName": "Taco",
-      "FoodImage": "https://i.ibb.co/dpk4b5v/jeswin-thomas-z-Pfa-Gze-N9-E-unsplash.jpg",
-      "FoodCategory": "Mexican",
-      "Price": 7.49,
-      "Count": 0
-    },
-    {
-      "myID": 7,
-      "FoodName": "Steak",
-      "FoodImage": "https://i.ibb.co/PCX7PH5/madie-hamilton-d-Z-HI4-Eu-Wc-A-unsplash.jpg",
-      "FoodCategory": "American",
-      "Price": 15.99,
-      "Count": 0
-    },
-    {
-      "myID": 8,
-      "FoodName": "Sushi Roll",
-      "FoodImage": "https://i.ibb.co/YBKjj73/mahmoud-fawzy-FBez-BX26dy-Y-unsplash.jpg",
-      "FoodCategory": "Japanese",
-      "Price": 14.49,
-      "Count": 0
-    },
-    {
-      "myID": 9,
-      "FoodName": "Chicken Wings",
-      "FoodImage": "https://i.ibb.co/5FZPHG0/alaundra-alford-Bm-Rb-JBoud-Dw-unsplash.jpg",
-      "FoodCategory": "Appetizer",
-      "Price": 9.99,
-      "Count": 0
-    },
-    {
-      "myID": 10,
-      "FoodName": "Salad",
-      "FoodImage": "https://i.ibb.co/pf20Csb/anna-pelzer-IGf-IGP5-ONV0-unsplash.jpg",
-      "FoodCategory": "Healthy",
-      "Price": 6.99,
-      "Count": 0
-    },
-    {
-      "myID": 11,
-      "FoodName": "Burrito",
-      "FoodImage": "https://i.ibb.co/tKTSWxv/creative-headline-F10n-THk-Ci-W8-unsplash.jpg",
-      "FoodCategory": "Mexican",
-      "Price": 8.49,
-      "Count": 0
-    },
-    {
-      "myID": 12,
-      "FoodName": "Fried Rice",
-      "FoodImage": "https://i.ibb.co/G06VHNB/annie-spratt-o-T7-v-I0h-Hg-unsplash.jpg",
-      "FoodCategory": "Asian",
-      "Price": 11.99,
-      "Count": 0
-    },
-    {
-      "myID": 13,
-      "FoodName": "Cheeseburger",
-      "FoodImage": "https://i.ibb.co/WtKr79Z/aleisha-kalina-Xqsf-Gjt-B0x-E-unsplash.jpg",
-      "FoodCategory": "Fast Food",
-      "Price": 6.99,
-      "Count": 0
-    },
-    {
-      "myID": 14,
-      "FoodName": "Hot Dog",
-      "FoodImage": "https://i.ibb.co/dbQq86L/ball-park-brand-Lntnns1-YBEY-unsplash.jpg",
-      "FoodCategory": "Fast Food",
-      "Price": 3.99,
-      "Count": 0
-    },
-    {
-      "myID": 15,
-      "FoodName": "Cupcake",
-      "FoodImage": "https://i.ibb.co/YfkMgFw/brooke-lark-p-GM4sjt-Bd-Q-unsplash.jpg",
-      "FoodCategory": "Dessert",
-      "Price": 2.49,
-      "Count": 0
-    },
-    {
-      "myID": 16,
-      "FoodName": "Fish Tacos",
-      "FoodImage": "https://i.ibb.co/MSFt3RH/amie-watson-2h-BUvhe81m-U-unsplash.jpg",
-      "FoodCategory": "Seafood",
-      "Price": 10.99,
-      "Count": 0
-    },
-    {
-      "myID": 17,
-      "FoodName": "Margarita Pizza",
-      "FoodImage": "https://i.ibb.co/nkrkzfC/aurelien-lemasson-theobald-x00-Cz-Bt4-Dfk-unsplash.jpg",
-      "FoodCategory": "Italian",
-      "Price": 9.99,
-      "Count": 0
-    },
-    {
-      "myID": 18,
-      "FoodName": "Fajitas",
-      "FoodImage": "https://i.ibb.co/CPfFv3d/hybrid-storytellers-n5ar-EY-Dix-U-unsplash.jpg",
-      "FoodCategory": "Mexican",
-      "Price": 12.49,
-      "Count": 0
-    },
-    {
-      "myID": 19,
-      "FoodName": "Milkshake",
-      "FoodImage": "https://i.ibb.co/9tWMf4j/sebastian-coman-photography-rw-BJa-Jdes-Gg-unsplash.jpg",
-      "FoodCategory": "Dessert",
-      "Price": 4.99,
-      "Count": 0
-    },
-    {
-      "myID": 20,
-      "FoodName": "Grilled Cheese Sandwich",
-      "FoodImage": "https://i.ibb.co/YPJv7xY/pixzolo-photography-ZB8-NK8c-B4-EE-unsplash.jpg",
-      "FoodCategory": "American",
-      "Price": 5.49,
-      "Count": 0
-    }
-  ]
+  {
+    "myID": 1,
+    "FoodName": "Burger",
+    "FoodImage": "https://i.ibb.co/9gsH0Tc/burger.jpg",
+    "FoodCategory": "Fast Food",
+    "Price": 5.99,
+    "Count": 0,
+    "ShortDescription": "A classic fast-food burger with all the fixings.",
+    "LongDescription": "Our signature burger is made with 100% Angus beef, topped with fresh lettuce, ripe tomatoes, pickles, onions, and your choice of cheese. Served on a toasted sesame seed bun."
+  },
+  {
+    "myID": 2,
+    "FoodName": "Pizza",
+    "FoodImage": "https://i.ibb.co/wgV0gLn/ivan-torres-MQUqbmsz-GGM-unsplash.jpg",
+    "FoodCategory": "Italian",
+    "Price": 8.99,
+    "Count": 0,
+    "ShortDescription": "Delicious Italian pizza straight from the oven.",
+    "LongDescription": "Our pizza features a thin crust, topped with rich tomato sauce, mozzarella cheese, and your favorite toppings. Baked to perfection for a crispy, flavorful experience."
+  },
+  {
+    "myID": 3,
+    "FoodName": "Sushi",
+    "FoodImage": "https://i.ibb.co/jMT6wJj/riccardo-bergamini-O2y-Nz-Xdq-Ou0-unsplash.jpg",
+    "FoodCategory": "Japanese",
+    "Price": 12.99,
+    "Count": 0,
+    "ShortDescription": "Exquisite Japanese sushi made with fresh ingredients.",
+    "LongDescription": "Our sushi is crafted using the finest quality fish, rice, and seaweed. Each piece is carefully prepared by our skilled chefs, ensuring a delightful and authentic sushi experience."
+  },
+  {
+    "myID": 4,
+    "FoodName": "Pasta",
+    "FoodImage": "https://i.ibb.co/pyfWmP1/ben-lei-fl-Fd8-L7-B3g-unsplash.jpg",
+    "FoodCategory": "Italian",
+    "Price": 10.49,
+    "Count": 0,
+    "ShortDescription": "Savory Italian pasta cooked to perfection.",
+    "LongDescription": "Indulge in our mouthwatering pasta dish, featuring al dente noodles smothered in rich marinara sauce, garnished with fresh basil, and grated Parmesan cheese. A true Italian culinary delight."
+  },
+  {
+    "myID": 5,
+    "FoodName": "Ice Cream",
+    "FoodImage": "https://i.ibb.co/YcHpcLq/lama-roscu-Wpg3-Qm0za-Gk-unsplash.jpg",
+    "FoodCategory": "Dessert",
+    "Price": 4.99,
+    "Count": 0,
+    "ShortDescription": "Creamy and delightful ice cream in various flavors.",
+    "LongDescription": "Our ice cream is made from the finest ingredients, creating a smooth and creamy texture that melts in your mouth. Choose from a variety of flavors, each offering a delightful taste of sweetness."
+  },
+  {
+    "myID": 6,
+    "FoodName": "Taco",
+    "FoodImage": "https://i.ibb.co/dpk4b5v/jeswin-thomas-z-Pfa-Gze-N9-E-unsplash.jpg",
+    "FoodCategory": "Mexican",
+    "Price": 7.49,
+    "Count": 0,
+    "ShortDescription": "Spicy and flavorful Mexican tacos for a zesty experience.",
+    "LongDescription": "Our tacos are filled with seasoned meat, fresh vegetables, and zesty sauces, creating a burst of flavors in every bite. Wrapped in soft corn tortillas, these tacos deliver an authentic Mexican taste."
+  },
+  {
+    "myID": 7,
+    "FoodName": "Steak",
+    "FoodImage": "https://i.ibb.co/PCX7PH5/madie-hamilton-d-Z-HI4-Eu-Wc-A-unsplash.jpg",
+    "FoodCategory": "American",
+    "Price": 15.99,
+    "Count": 0,
+    "ShortDescription": "Juicy and succulent steak cooked to perfection.",
+    "LongDescription": "Indulge in our premium steak, grilled to your desired level of doneness. Each bite offers a burst of flavor and tenderness, making it a delightful choice for meat lovers. Served with your choice of side dishes."
+  },
+  {
+    "myID": 8,
+    "FoodName": "Sushi Roll",
+    "FoodImage": "https://i.ibb.co/YBKjj73/mahmoud-fawzy-FBez-BX26dy-Y-unsplash.jpg",
+    "FoodCategory": "Japanese",
+    "Price": 14.49,
+    "Count": 0,
+    "ShortDescription": "Artfully crafted sushi rolls with unique flavors.",
+    "LongDescription": "Our sushi rolls are a work of art, combining fresh fish, vegetables, and rice in a harmonious blend of flavors. Each roll is carefully prepared and presented, providing a delightful culinary experience."
+  },
+  {
+    "myID": 9,
+    "FoodName": "Chicken Wings",
+    "FoodImage": "https://i.ibb.co/5FZPHG0/alaundra-alford-Bm-Rb-JBoud-Dw-unsplash.jpg",
+    "FoodCategory": "Appetizer",
+    "Price": 9.99,
+    "Count": 0,
+    "ShortDescription": "Crispy and flavorful chicken wings for a satisfying appetizer.",
+    "LongDescription": "Our chicken wings are marinated, deep-fried to perfection, and tossed in your choice of savory sauces. Served with celery sticks and dipping sauce, these wings are an ideal choice to start your meal."
+  },
+  {
+    "myID": 10,
+    "FoodName": "Salad",
+    "FoodImage": "https://i.ibb.co/pf20Csb/anna-pelzer-IGf-IGP5-ONV0-unsplash.jpg",
+    "FoodCategory": "Healthy",
+    "Price": 6.99,
+    "Count": 0,
+    "ShortDescription": "Fresh and nutritious salad made with garden-fresh ingredients.",
+    "LongDescription": "Our salad is a delightful blend of crisp lettuce, colorful vegetables, and a variety of toppings. Drizzled with your choice of dressing, this refreshing salad offers a healthy and satisfying dining experience."
+  },
+  {
+    "myID": 11,
+    "FoodName": "Burrito",
+    "FoodImage": "https://i.ibb.co/tKTSWxv/creative-headline-F10n-THk-Ci-W8-unsplash.jpg",
+    "FoodCategory": "Mexican",
+    "Price": 8.49,
+    "Count": 0,
+    "ShortDescription": "Hearty and flavorful Mexican burrito for a filling meal.",
+    "LongDescription": "Our burrito is filled with seasoned meat, rice, beans, cheese, and a medley of flavorful ingredients. Wrapped in a warm tortilla, it's a satisfying and hearty choice for those craving authentic Mexican cuisine."
+  },
+  {
+    "myID": 12,
+    "FoodName": "Fried Rice",
+    "FoodImage": "https://i.ibb.co/G06VHNB/annie-spratt-o-T7-v-I0h-Hg-unsplash.jpg",
+    "FoodCategory": "Asian",
+    "Price": 11.99,
+    "Count": 0,
+    "ShortDescription": "Flavorful Asian fried rice with a variety of ingredients.",
+    "LongDescription": "Our fried rice is stir-fried to perfection, combining fluffy rice with fresh vegetables, eggs, and your choice of protein. Seasoned with aromatic spices and sauces, it's a delightful and aromatic dish."
+  },
+  {
+    "myID": 13,
+    "FoodName": "Cheeseburger",
+    "FoodImage": "https://i.ibb.co/WtKr79Z/aleisha-kalina-Xqsf-Gjt-B0x-E-unsplash.jpg",
+    "FoodCategory": "Fast Food",
+    "Price": 6.99,
+    "Count": 0,
+    "ShortDescription": "Classic cheeseburger with gooey melted cheese and juicy patty.",
+    "LongDescription": "Indulge in our cheeseburger, featuring a succulent beef patty, melted cheese, fresh lettuce, ripe tomatoes, onions, and condiments. Served on a toasted bun, it's a timeless favorite for burger enthusiasts."
+  },
+  {
+    "myID": 14,
+    "FoodName": "Hot Dog",
+    "FoodImage": "https://i.ibb.co/dbQq86L/ball-park-brand-Lntnns1-YBEY-unsplash.jpg",
+    "FoodCategory": "Fast Food",
+    "Price": 3.99,
+    "Count": 0,
+    "ShortDescription": "Classic hot dog with all the traditional toppings.",
+    "LongDescription": "Our hot dog is made from premium sausages, grilled to perfection and served in a soft bun. Topped with mustard, ketchup, onions, and relish, it's a delicious and satisfying choice for fast food lovers."
+  },
+  {
+    "myID": 15,
+    "FoodName": "Cupcake",
+    "FoodImage": "https://i.ibb.co/YfkMgFw/brooke-lark-p-GM4sjt-Bd-Q-unsplash.jpg",
+    "FoodCategory": "Dessert",
+    "Price": 2.49,
+    "Count": 0,
+    "ShortDescription": "Sweet and delectable cupcake for a delightful dessert.",
+    "LongDescription": "Our cupcakes are baked to perfection, featuring moist cake and creamy frosting. Decorated with colorful sprinkles, they are a delightful treat for dessert enthusiasts. Perfect for parties, events, or a sweet indulgence."
+  },
+  {
+    "myID": 16,
+    "FoodName": "Fish Tacos",
+    "FoodImage": "https://i.ibb.co/MSFt3RH/amie-watson-2h-BUvhe81m-U-unsplash.jpg",
+    "FoodCategory": "Seafood",
+    "Price": 10.99,
+    "Count": 0,
+    "ShortDescription": "Zesty fish tacos with a burst of seafood flavors.",
+    "LongDescription": "Our fish tacos feature crispy battered fish, fresh cabbage slaw, and zesty sauces, all wrapped in soft corn tortillas. The combination of textures and flavors creates a delightful seafood experience that will leave you craving more."
+  },
+  {
+    "myID": 17,
+    "FoodName": "Margarita Pizza",
+    "FoodImage": "https://i.ibb.co/nkrkzfC/aurelien-lemasson-theobald-x00-Cz-Bt4-Dfk-unsplash.jpg",
+    "FoodCategory": "Italian",
+    "Price": 9.99,
+    "Count": 0,
+    "ShortDescription": "Classic Margarita pizza with a perfect blend of cheese and sauce.",
+    "LongDescription": "Our Margarita pizza is a timeless favorite, featuring a thin crust, rich tomato sauce, fresh mozzarella cheese, and basil leaves. Baked to perfection in a wood-fired oven, it delivers a classic Italian pizza experience."
+  },
+  {
+    "myID": 18,
+    "FoodName": "Fajitas",
+    "FoodImage": "https://i.ibb.co/CPfFv3d/hybrid-storytellers-n5ar-EY-Dix-U-unsplash.jpg",
+    "FoodCategory": "Mexican",
+    "Price": 12.49,
+    "Count": 0,
+    "ShortDescription": "Sizzling fajitas with a medley of flavorful ingredients.",
+    "LongDescription": "Our fajitas are prepared with sizzling grilled meat, onions, bell peppers, and a blend of spices. Served with warm tortillas, guacamole, sour cream, and salsa, it's a customizable and hearty Mexican dish that satisfies your taste buds."
+  },
+  {
+    "myID": 19,
+    "FoodName": "Milkshake",
+    "FoodImage": "https://i.ibb.co/9tWMf4j/sebastian-coman-photography-rw-BJa-Jdes-Gg-unsplash.jpg",
+    "FoodCategory": "Dessert",
+    "Price": 4.99,
+    "Count": 0,
+    "ShortDescription": "Creamy and indulgent milkshake in various flavors.",
+    "LongDescription": "Our milkshakes are made with premium ice cream, blended to perfection with milk and your favorite flavors. Topped with whipped cream and a cherry, they are a delightful and indulgent dessert option for milkshake lovers."
+  },
+  {
+    "myID": 20,
+    "FoodName": "Grilled Cheese Sandwich",
+    "FoodImage": "https://i.ibb.co/YPJv7xY/pixzolo-photography-ZB8-NK8c-B4-EE-unsplash.jpg",
+    "FoodCategory": "American",
+    "Price": 5.49,
+    "Count": 0,
+    "ShortDescription": "Classic grilled cheese sandwich with gooey melted cheese.",
+    "LongDescription": "Our grilled cheese sandwich features layers of gooey melted cheese between slices of perfectly toasted bread. Crispy on the outside and cheesy on the inside, it's a comforting and satisfying choice for a quick and delicious meal."
+  }
+]

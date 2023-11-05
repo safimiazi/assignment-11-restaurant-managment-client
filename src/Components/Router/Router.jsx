@@ -5,6 +5,7 @@ import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Register/Register";
 import Blog from "../../Pages/Blog/Blog";
 import AllFood from "../../Pages/AllFood/AllFood";
+import CardDetails from "../../Pages/CardDetails/CardDetails";
 
 
 const router = createBrowserRouter([
@@ -30,7 +31,14 @@ const router = createBrowserRouter([
         },
         {
             path: '/all-food',
-            element: <AllFood></AllFood>
+            element: <AllFood></AllFood>,
+            loader: ()=> fetch('http://localhost:5000/api/v1/productsCount')
+        },
+        {
+          path: '/card-details/:id',
+          element: <CardDetails></CardDetails>,
+          loader: ({params})=> fetch(`http://localhost:5000/api/v1/items/${params.id}`)
+          
         }
       ]
     },
