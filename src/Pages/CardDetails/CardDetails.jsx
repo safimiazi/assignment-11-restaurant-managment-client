@@ -10,7 +10,7 @@ const CardDetails = () => {
     return (
         <div className="flex justify-center items-center">
             <div className="card w-96 my-32 bg-base-100 shadow-xl">
-                <p>{Count}</p>
+    
                 <figure><img src={FoodImage} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{FoodName}</h2>
