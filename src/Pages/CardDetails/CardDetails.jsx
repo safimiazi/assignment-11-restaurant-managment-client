@@ -1,5 +1,5 @@
 
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const CardDetails = () => {
     const { id } = useParams()
@@ -17,7 +17,7 @@ const CardDetails = () => {
                     <p>Price: {Price}</p>
                     <p>{LongDescription}</p>
                     <div className="card-actions justify-center w-full">
-                        <button className="btn w-full btn-neutral">Order now</button>
+                    <Link to={`/purchase/${_id}`}><button className="btn btn-neutral">order</button></Link>
                     </div>
                 </div>
             </div>

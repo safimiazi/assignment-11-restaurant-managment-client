@@ -1,13 +1,35 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
+    console.log("hi my", user);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
     const NavList = <>
         <li><NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Home</NavLink></li>
         <li><NavLink to="/all-food" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>All Food</NavLink></li>
         <li><NavLink to="/blog" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Blog</NavLink></li>
-        <li><NavLink to="/login" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Login</NavLink></li>
         <li><NavLink to="/add-food-item" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>add food item</NavLink></li>
+        {
+            user ? <div className="flex items-center">
+                  <li><NavLink onClick={handleLogOut} to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>logout</NavLink></li>    
+            </div>
+
+                : <li><NavLink to="/login" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Login</NavLink></li>
+        }
     </>
+
+
     return (
         <div className="navbar max-w-screen-xl mx-auto md:px-10">
             <div className="navbar-start">
@@ -23,11 +45,36 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    { NavList }
+                    {NavList}
                 </ul>
             </div>
+
             <div className="navbar-end">
-            
+                <div>
+                    <p>{user?.displayName}</p>
+                </div>
+                {
+                    user ? <div className="dropdown dropdown-end">
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                {user.photoURL ? (
+                                    <img src={user.photoURL} alt="User Profile" />
+                                ) : (
+                                    <img src="https://i.ibb.co/tBCst7k/user-sign-in-profile-avatar-user-icon-in-flat-style-user-icon-for-the-website-team-logo-vector.jpg" alt="Default Profile" />
+                                )}
+                            </div>
+                        </label>
+                        <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                            <li>
+                                <a>
+                                My added food items
+                                </a>
+                            </li>
+                            <li><a> Add a food item</a></li>
+                            <li><a> My ordered food items</a></li>
+                        </ul>
+                    </div> : " "
+                }
             </div>
         </div>
     );
