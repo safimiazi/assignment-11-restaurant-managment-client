@@ -1,7 +1,13 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 
 
 const AddFoodItem = () => {
+    const { user } = useContext(AuthContext);
+    const customerEmail = user?.email;
+    const customerName = user?.displayName
+
     const handleForm = e => {
         e.preventDefault()
         const FoodName = e.target.foodName.value;
@@ -9,13 +15,13 @@ const AddFoodItem = () => {
         const FoodCategory = e.target.category.value;
         const Quantity = e.target.quantity.value;
         const Price = e.target.price.value;
-        const Email = e.target.email.value;
+        const Name = e.target.name.value;
         const Country = e.target.country.value;
-        // const Count = e.target.count.value;
+        const Email = e.target.email.value;
         const ShortDescription = e.target.shortDescription.value;
         const LongDescription = e.target.longDescription.value;
 
-        const product = { FoodName, FoodImage, FoodCategory, Quantity, Price, Email, Country, ShortDescription, LongDescription }
+        const product = { FoodName, FoodImage, FoodCategory, Quantity, Price, Name,Email, Country, ShortDescription, LongDescription }
         fetch("http://localhost:5000/api/v1/post-items", {
             method: 'POST',
             headers: {
@@ -88,9 +94,9 @@ const AddFoodItem = () => {
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text"> Add By</span>
+                                        <span className="label-text">customer name</span>
                                     </label>
-                                    <input type="text" name="email" placeholder="email" className="input input-bordered" required />
+                                    <input type="text" defaultValue={customerName} name="name" placeholder="name" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -98,12 +104,12 @@ const AddFoodItem = () => {
                                     </label>
                                     <input type="text" name="country" placeholder="Country" className="input input-bordered" required />
                                 </div>
-                                {/* <div className="form-control">
+                                <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">count</span>
+                                        <span className="label-text">Customer email</span>
                                     </label>
-                                    <input type="text" name="count" placeholder="Country" className="input input-bordered" required />
-                                </div> */}
+                                    <input type="text" defaultValue={customerEmail} name="email" placeholder="Country" className="input input-bordered" required />
+                                </div>
                             </div>
                             <div className="form-control">
                                 <label className="label">

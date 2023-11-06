@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const AllFoodCard = ({singleData}) => {
-    const { Count, _id, FoodCategory, FoodImage, FoodName, Price, ShortDescription, LongDescription } = singleData;
+    const {Quantity, Count, _id, FoodCategory, FoodImage, FoodName, Price, ShortDescription, LongDescription } = singleData;
 
     return (
         <div>
@@ -14,6 +14,7 @@ const AllFoodCard = ({singleData}) => {
                 <h2 className="card-title">{FoodName}</h2>
                 <p>Category: {FoodCategory}</p>
                 <p>Price: {Price}</p>
+                <p>Quantity: {Quantity}</p>
                 <div className="card-actions">
                     <Link to={`/card-details/${_id}`}><button className="btn btn-neutral">Details</button></Link>
                 </div>
