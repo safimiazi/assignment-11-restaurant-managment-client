@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const CardSection = () => {
     const axios = useAxios();
     const getProducts = async () => {
-        const res = await axios.get('/top-selling?sortField=Price&sortOrder=desc')
+        const res = await axios.get('/top-selling?sortField=Count&sortOrder=desc')
        console.log("dddd",res)
         return res;
     }

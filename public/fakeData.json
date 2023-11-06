@@ -2,30 +2,6 @@
 [
   
   {
-    "FoodName": "Caesar Salad",
-    "FoodImage": "caesar_salad.jpg",
-    "FoodCategory": "Healthy",
-    "Quantity": 1,
-    "Price": 8.99,
-    "Email": "support@example.com",
-    "Country": "USA",
-    "Count": 160,
-    "ShortDescription": "Classic Caesar salad with croutons",
-    "LongDescription": "Crisp romaine lettuce tossed with Caesar dressing, croutons, and Parmesan cheese, a classic and timeless salad choice."
-  },
-  {
-    "FoodName": "Hamburger",
-    "FoodImage": "hamburger.jpg",
-    "FoodCategory": "American",
-    "Quantity": 1,
-    "Price": 7.99,
-    "Email": "hello@example.com",
-    "Country": "USA",
-    "Count": 170,
-    "ShortDescription": "Grilled beef patty in a bun",
-    "LongDescription": "Juicy beef patty grilled to perfection, served in a soft bun with lettuce, tomato, onions, and condiments."
-  },
-  {
     "FoodName": "Spring Rolls",
     "FoodImage": "spring_rolls.jpg",
     "FoodCategory": "Vietnamese",
