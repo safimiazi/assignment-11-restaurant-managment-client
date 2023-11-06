@@ -10,16 +10,17 @@ const AddFoodItem = () => {
 
     const handleForm = e => {
         e.preventDefault()
-        const FoodName = e.target.foodName.value;
-        const FoodImage = e.target.foodImage.value;
-        const FoodCategory = e.target.category.value;
-        const Quantity = e.target.quantity.value;
-        const Price = e.target.price.value;
-        const Name = e.target.name.value;
-        const Country = e.target.country.value;
-        const Email = e.target.email.value;
-        const ShortDescription = e.target.shortDescription.value;
-        const LongDescription = e.target.longDescription.value;
+        const form = e.target;
+        const FoodName = form.foodName.value;
+        const FoodImage = form.foodImage.value;
+        const FoodCategory = form.category.value;
+        const Quantity = form.quantity.value;
+        const Price = form.price.value;
+        const Name = form.name.value;
+        const Country = form.country.value;
+        const Email = form.email.value;
+        const ShortDescription = form.shortDescription.value;
+        const LongDescription = form.longDescription.value;
 
         const product = { FoodName, FoodImage, FoodCategory, Quantity, Price, Name,Email, Country, ShortDescription, LongDescription }
         fetch("http://localhost:5000/api/v1/post-items", {
@@ -38,6 +39,7 @@ const AddFoodItem = () => {
                         'Item was successfully added!',
                         'success'
                     );
+                    form.reset()
                 } else {
                     Swal.fire(
                         'Error!',
@@ -59,7 +61,7 @@ const AddFoodItem = () => {
         <div>
             <div className="min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card  flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleForm} className="card-body">
                             <div className=" grid md:grid-cols-2 grid-cols-1 gap-2">
                                 <div className="form-control">
@@ -96,7 +98,7 @@ const AddFoodItem = () => {
                                     <label className="label">
                                         <span className="label-text">customer name</span>
                                     </label>
-                                    <input type="text" defaultValue={customerName} name="name" placeholder="name" className="input input-bordered" required />
+                                    <input type="text" readOnly defaultValue={customerName} name="name" placeholder="name" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -108,7 +110,7 @@ const AddFoodItem = () => {
                                     <label className="label">
                                         <span className="label-text">Customer email</span>
                                     </label>
-                                    <input type="text" defaultValue={customerEmail} name="email" placeholder="Country" className="input input-bordered" required />
+                                    <input type="text" readOnly defaultValue={customerEmail} name="email" placeholder="Country" className="input input-bordered" required />
                                 </div>
                             </div>
                             <div className="form-control">

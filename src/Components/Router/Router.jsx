@@ -8,6 +8,8 @@ import AllFood from "../../Pages/AllFood/AllFood";
 import CardDetails from "../../Pages/CardDetails/CardDetails";
 import AddFoodItem from "../../Pages/AddFoodItem/AddFoodItem";
 import Purchase from "../../Pages/Purchase/Purchase";
+import MyAddedFood from "../../Pages/MyAddedFood/MyAddedFood";
+import MyOrderedFood from "../../Pages/MyOrderedFood/MyOrderedFood";
 
 
 const router = createBrowserRouter([
@@ -51,6 +53,14 @@ const router = createBrowserRouter([
           element: <Purchase></Purchase>,
           loader: ({params})=> fetch(`http://localhost:5000/api/v1/items/${params.id}`)
 
+        },
+        {
+          path: '/my-added-food',
+          element: <MyAddedFood></MyAddedFood>
+        },
+        {
+          path: '/my-ordered-food',
+          element: <MyOrderedFood></MyOrderedFood>
         }
       ]
     },

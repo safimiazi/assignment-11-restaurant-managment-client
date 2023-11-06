@@ -19,7 +19,6 @@ const Navbar = () => {
         <li><NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Home</NavLink></li>
         <li><NavLink to="/all-food" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>All Food</NavLink></li>
         <li><NavLink to="/blog" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Blog</NavLink></li>
-        <li><NavLink to="/add-food-item" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>add food item</NavLink></li>
         {
             user ? <div className="flex items-center">
                   <li><NavLink onClick={handleLogOut} to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>logout</NavLink></li>    
@@ -65,13 +64,9 @@ const Navbar = () => {
                             </div>
                         </label>
                         <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                            <li>
-                                <a>
-                                My added food items
-                                </a>
-                            </li>
-                            <li><a> Add a food item</a></li>
-                            <li><a> My ordered food items</a></li>
+                        <li><NavLink to="/my-added-food" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}> My added food items</NavLink></li>
+                        <li><NavLink to="/add-food-item" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>add food item</NavLink></li>
+                        <li><NavLink to="/my-ordered-food" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>My ordered food items</NavLink></li>
                         </ul>
                     </div> : " "
                 }
