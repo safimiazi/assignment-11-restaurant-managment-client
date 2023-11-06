@@ -11,11 +11,11 @@ const AddFoodItem = () => {
         const Price = e.target.price.value;
         const Email = e.target.email.value;
         const Country = e.target.country.value;
-        const Count = e.target.count.value;
+        // const Count = e.target.count.value;
         const ShortDescription = e.target.shortDescription.value;
         const LongDescription = e.target.longDescription.value;
 
-        const product = { FoodName, FoodImage, FoodCategory, Quantity, Price, Email, Country, Count, ShortDescription, LongDescription }
+        const product = { FoodName, FoodImage, FoodCategory, Quantity, Price, Email, Country, ShortDescription, LongDescription }
         fetch("http://localhost:5000/api/v1/post-items", {
             method: 'POST',
             headers: {
@@ -98,12 +98,12 @@ const AddFoodItem = () => {
                                     </label>
                                     <input type="text" name="country" placeholder="Country" className="input input-bordered" required />
                                 </div>
-                                <div className="form-control">
+                                {/* <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">count</span>
                                     </label>
                                     <input type="text" name="count" placeholder="Country" className="input input-bordered" required />
-                                </div>
+                                </div> */}
                             </div>
                             <div className="form-control">
                                 <label className="label">

@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { json, useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { useContext } from "react";
 import Swal from "sweetalert2";
@@ -16,6 +16,8 @@ const Purchase = () => {
     const { user } = useContext(AuthContext);
     const email = user?.email;
     const buyerName = user?.displayName
+
+    const newCount = Count + 1;
 
 
 
@@ -46,7 +48,23 @@ const Purchase = () => {
                     text: "You clicked the button!",
                     icon: "success"
                   });
-                navigate('/')
+            //for update count
+            fetch(`http://localhost:5000/api/v1/update-count/${_id}`,{
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify({Count:newCount})
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+                
+
+
+
+                // navigate('/')
 
             }
         })
