@@ -1,10 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { useContext } from "react";
+import Swal from "sweetalert2";
 
 
 const Purchase = () => {
     const { Count, _id, FoodCategory, FoodImage, FoodName, Price, ShortDescription, LongDescription } = useLoaderData()
+    const navigate = useNavigate()
     const currentDate = new Date();
     const day = currentDate.getDate();
     const month = currentDate.getMonth() + 1;
@@ -14,6 +16,9 @@ const Purchase = () => {
     const { user } = useContext(AuthContext);
     const email = user?.email;
     const buyerName = user?.displayName
+
+
+
     const handlePurchase = e => {
         e.preventDefault()
         const foodName = e.target.foodName.value;
@@ -22,8 +27,29 @@ const Purchase = () => {
         const buyerName = e.target.buyerName.value;
         const buyingDate = e.target.buyingDate.value;
         const buyerEmail = e.target.buyerEmail.value;
-        console.log(foodName, price, quantity, buyerEmail, buyerName, buyingDate);
-        console.log("email", buyerEmail);
+        const product = {foodName, price, quantity, buyerEmail, buyerName, buyingDate};
+       
+        //for add to cart in the another collection of database
+        fetch('http://localhost:5000/api/v1/cart',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            
+            },
+            body: JSON.stringify(product)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.insertedId) {
+                Swal.fire({
+                    title: "Good job!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                  });
+                navigate('/')
+
+            }
+        })
 
     }
     return (
