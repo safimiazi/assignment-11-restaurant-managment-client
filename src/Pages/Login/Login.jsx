@@ -2,7 +2,7 @@
 
 /* eslint-disable react/no-unknown-property */
 import { useContext } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
@@ -10,6 +10,8 @@ import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 const Login = () => {
     const { signInUser, signInWithGoogle, signInWithGithub} = useContext(AuthContext)
     const navigate = useNavigate()
+    const location = useLocation()
+    console.log(location);
     const handleLogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -24,19 +26,21 @@ const Login = () => {
                 console.log(result);
         
               toast.success("Login Successfully");
+              navigate(location?.state ? location.state : '/')
+
               //step 2 {jwt}
               //get access token
-              const user = {email}
-              axios.post('', user, {withCredentials:true})
-              .then(res => {
-                console.log(res.data);
-                if(res.data.success){
-                    navigate("/");
-                }
-              })
-             .then(error => {
-                console.log(error);
-             })
+            //   const user = {email}
+            //   axios.post('', user, {withCredentials:true})
+            //   .then(res => {
+            //     console.log(res.data);
+            //     if(res.data.success){
+            //         navigate("/");
+            //     }
+            //   })
+            //  .then(error => {
+            //     console.log(error);
+            //  })
 
 
 
