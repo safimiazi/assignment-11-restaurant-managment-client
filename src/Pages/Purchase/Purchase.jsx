@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 
 const Purchase = () => {
-    const { Count, _id, FoodCategory,Quantity, FoodImage, FoodName, Price, ShortDescription, LongDescription } = useLoaderData()
+    const { Count, _id, FoodCategory,Quantity, Email, FoodImage, FoodName, Price, ShortDescription, LongDescription } = useLoaderData()
     const navigate = useNavigate()
     const currentDate = new Date();
     const day = currentDate.getDate();
@@ -40,6 +40,15 @@ const Purchase = () => {
             icon: "error",
           });
           return;
+      }
+
+      if (Email === buyerEmail) {
+        Swal.fire({
+          title: "Error!",
+          text: "You cannot purchase your own added food items.",
+          icon: "error",
+        });
+        return;
       }
 
 
