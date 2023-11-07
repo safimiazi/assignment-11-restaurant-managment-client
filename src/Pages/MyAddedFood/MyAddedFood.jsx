@@ -12,6 +12,7 @@ const MyAddedFood = () => {
             try {
                 const response = await fetch(`http://localhost:5000/api/v1/get-added-food?email=${email}`);
                 const result = await response.json();
+                console.log(result);
                 setData(result);
             } catch (error) {
                 console.error("Error fetching data:", error);

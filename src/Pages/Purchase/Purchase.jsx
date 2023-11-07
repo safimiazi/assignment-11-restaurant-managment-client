@@ -29,7 +29,7 @@ const Purchase = () => {
         const buyerName = e.target.buyerName.value;
         const buyingDate = e.target.buyingDate.value;
         const buyerEmail = e.target.buyerEmail.value;
-        const product = {foodName, price, quantity, buyerEmail, buyerName, buyingDate};
+        const product = {foodName,FoodImage, price, quantity, buyerEmail, buyerName, buyingDate};
        
         //for add to cart in the another collection of database
         fetch('http://localhost:5000/api/v1/cart',{

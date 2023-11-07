@@ -24,16 +24,14 @@ const UpdateFoodItems = () => {
             },
             body: JSON.stringify(updateItem)
         })
-            .then(res => {
-                console.log(res.json());
-            })
+            .then(res => res.json())
             .then(data => {
                 console.log(data);
                 if (data?.modifiedCount > 0) {
                     //update state
                     Swal.fire({
                         title: "Good job!",
-                        text: "You clicked the button!",
+                        text: "updated successfully!",
                         icon: "success"
                     });
                 }
