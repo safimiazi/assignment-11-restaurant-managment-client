@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 
 const Purchase = () => {
-    const { Count, _id, FoodCategory, FoodImage, FoodName, Price, ShortDescription, LongDescription } = useLoaderData()
+    const { Count, _id, FoodCategory,Quantity, FoodImage, FoodName, Price, ShortDescription, LongDescription } = useLoaderData()
     const navigate = useNavigate()
     const currentDate = new Date();
     const day = currentDate.getDate();
@@ -19,7 +19,7 @@ const Purchase = () => {
 
     const newCount = Count + 1;
 
-
+  console.log("this is the quantity",Quantity);
 
     const handlePurchase = e => {
         e.preventDefault()
@@ -31,6 +31,18 @@ const Purchase = () => {
         const buyerEmail = e.target.buyerEmail.value;
         const product = {foodName,FoodImage, price, quantity, buyerEmail, buyerName, buyingDate};
        
+      const newQuantity = parseInt(quantity)
+
+      if(newQuantity <= 0  ||  newQuantity > Quantity){
+        Swal.fire({
+            title: "Error!",
+            text: `Invalid quantity selected. available quantity is ${Quantity} `,
+            icon: "error",
+          });
+          return;
+      }
+
+
         //for add to cart in the another collection of database
         fetch('http://localhost:5000/api/v1/cart',{
             method: 'POST',
@@ -67,14 +79,12 @@ const Purchase = () => {
                       });
                 }
             })
-                
-
-
 
                 // navigate('/')
 
             }
         })
+
 
     }
     return (
