@@ -59,6 +59,13 @@ const Purchase = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                if(data){
+                    Swal.fire({
+                        title: "Good job!",
+                        text: "Purchase completed!",
+                        icon: "success"
+                      });
+                }
             })
                 
 
