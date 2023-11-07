@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import OrderedCard from "../../Components/OrderedCard/OrderedCard";
 import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const MyOrderedFood = () => {
     const [datas, setDatas] = useState([])
@@ -62,6 +63,9 @@ const MyOrderedFood = () => {
 
     return (
         <div className="grid py-20 md:grid-cols-2 grid-cols-1 gap-5 max-w-screen-xl mx-auto">
+            <Helmet>
+            <title>Granny | my ordered food</title>
+            </Helmet>
             {
                 datas?.map(singleData => <OrderedCard
                      singleData={singleData} 

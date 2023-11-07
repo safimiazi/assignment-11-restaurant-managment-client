@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const CardDetails = () => {
@@ -9,6 +10,9 @@ const CardDetails = () => {
 
     return (
         <div className="flex justify-center items-center">
+            <Helmet>
+            <title>Granny|food details</title>
+            </Helmet>
             <div className="card w-96 my-32 bg-base-100 shadow-xl">
     
                 <figure><img src={FoodImage} alt="Shoes" /></figure>

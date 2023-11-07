@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import MyAddedFoodCard from "../../Components/MyAddedFoodCard/MyAddedFoodCard";
+import { Helmet } from "react-helmet-async";
 
 const MyAddedFood = () => {
     const { user } = useContext(AuthContext);
@@ -24,6 +25,9 @@ const MyAddedFood = () => {
 
     return (
         <div className="my-20">
+            <Helmet>
+            <title>Granny | my added food</title>
+            </Helmet>
             <div>
                 <h3 className="text-center font-bold text-3xl mb-5">My added Food items</h3>
             </div>

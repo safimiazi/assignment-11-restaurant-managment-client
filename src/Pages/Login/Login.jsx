@@ -6,6 +6,7 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const { signInUser, signInWithGoogle, signInWithGithub} = useContext(AuthContext)
@@ -77,6 +78,9 @@ const Login = () => {
     }
     return (
         <div className="hero min-h-screen">
+            <Helmet>
+            <title>Granny|login</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Login now!</h1>

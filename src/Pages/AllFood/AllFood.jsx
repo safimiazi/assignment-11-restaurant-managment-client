@@ -4,6 +4,7 @@ import useAxios from "../../Hooks/useAxios";
 import AllFoodCard from "../../Components/allFoodCard/allFoodCard";
 import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 const AllFood = () => {
@@ -72,6 +73,9 @@ const AllFood = () => {
 
     return (
         <div className="max-w-screen-xl mx-auto md:px-10">
+            <Helmet>
+            <title>Granny| all food</title>
+            </Helmet>
             <div className="flex my-10 items-center justify-center">
                 <input
                     type="text"

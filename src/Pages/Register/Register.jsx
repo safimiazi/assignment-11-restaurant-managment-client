@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const navigate = useNavigate()
@@ -56,6 +57,9 @@ const Register = () => {
     }
     return (
         <div className="hero min-h-screen">
+            <Helmet>
+            <title>Granny | register</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Register</h1>

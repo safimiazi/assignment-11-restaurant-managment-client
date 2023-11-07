@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -39,6 +40,9 @@ const UpdateFoodItems = () => {
     }
     return (
         <div className="min-h-screen p-6  flex items-center text-black justify-center">
+           <Helmet>
+            <title>Granny | update food</title>
+            </Helmet>
             <div className="container max-w-screen-lg mx-auto">
                 <form onSubmit={handleUpdate}>
                     <div>

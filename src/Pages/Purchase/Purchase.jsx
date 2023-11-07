@@ -2,6 +2,7 @@ import { json, useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { useContext } from "react";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const Purchase = () => {
@@ -98,6 +99,9 @@ const Purchase = () => {
     }
     return (
         <div className="md:px-32 md:py-20">
+            <Helmet>
+            <title>Granny | purchase</title>
+            </Helmet>
             <form onSubmit={handlePurchase}>
                 <div className=" card p-10 text-white grid md:grid-cols-3 grid-cols-1 bg-black">
                     {/* Name field */}
