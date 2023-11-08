@@ -2,9 +2,9 @@ import { Helmet } from "react-helmet-async";
 import About from "../../Components/About/About";
 import Banner from "../../Components/Banner/Banner";
 import CardSection from "../../Components/CardSection/CardSection";
-import Contact from "../../Components/Contact/Contact";
 import Gallery from "../../Components/Gallery/Gallery";
 import ImgSection from "../../Components/ImgSection/ImgSection";
+import FaQuestion from "../../Components/FaQuestion/FaQuestion";
 
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
             <About></About>
             <Gallery></Gallery>
             <ImgSection></ImgSection>
-            <Contact></Contact>
+            <FaQuestion></FaQuestion>
         </div>
     );
 };

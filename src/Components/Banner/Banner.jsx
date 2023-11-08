@@ -1,89 +1,84 @@
+import { useState } from 'react';
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import { RxDotFilled } from 'react-icons/rx';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
-    return (
+  const slides = [
+    {
+      url: 'https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+    {
+      url: 'https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
 
-        <div className="max-w-screen-xl mx-auto md:px-10">
-            <div className="carousel w-full rounded-lg">
-            <div id="slide1" className="carousel-item relative w-full">
-                <img src="/src/assets/images/banner1.png" className="w-full h-full" />
-                <div className="absolute rounded-xl flex items-center left-[25%] right-[25%] z-10 h-full  top-0 ">
-                    <div className='text-white text-center md:space-y-7 space-y-2'>
-                        <h5 className='text-xl font-bold'>Hello, We Are Granny</h5>
-                        <h2 className="md:text-5xl text-2xl">Real Cooking, Perfect Taste</h2>
-                        <div>
-                        <button className="btn bg-white">Read more</button>
-                        </div>
-                    </div>
-                </div>
-                <div className=" absolute inset-0 bg-[#2e3130] opacity-70">
+    {
+      url: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+  ];
 
-                </div>
-                <div className="absolute   flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" className="btn btn-circle">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide2" className="carousel-item relative w-full">
-                <img src="/src/assets/images/banner1.png" className="w-full" />
-                <div className="absolute rounded-xl flex items-center left-[25%] right-[25%] z-10 h-full  top-0 ">
-                    <div className='text-white text-center md:space-y-7 space-y-2'>
-                        <h5 className='text-xl font-bold'>Hello, We Are Granny</h5>
-                        <h2 className="md:text-5xl text-2xl">Real Cooking, Perfect Taste</h2>
-                        <div>
-                            <button className="btn bg-white">Read more</button>
-                        </div>
-                    </div>
-                </div>
-                <div className=" absolute inset-0 bg-[#2e3130] opacity-70">
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-                </div>
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" className="btn btn-circle">❮</a>
-                    <a href="#slide3" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide3" className="carousel-item relative w-full">
-                <img src="/src/assets/images/banner3.png" className="w-full" />
-                <div className="absolute rounded-xl flex items-center left-[25%] right-[25%] z-10 h-full  top-0 ">
-                    <div className='text-white text-center md:space-y-7 space-y-2'>
-                        <h5 className='text-xl font-bold'>Hello, We Are Granny</h5>
-                        <h2 className="md:text-5xl text-2xl">Real Cooking, Perfect Taste</h2>
-                        <div>
-                        <button className="btn bg-white">Read more</button>
-                        </div>
-                    </div>
-                </div>
-                <div className=" absolute inset-0 bg-[#2e3130] opacity-70">
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
 
-                </div>
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" className="btn btn-circle">❮</a>
-                    <a href="#slide4" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide4" className="carousel-item relative w-full">
-                <img src="/src/assets/images/banner3.png" className="w-full" />
-                <div className="absolute rounded-xl flex items-center left-[25%] right-[25%] z-10 h-full  top-0 ">
-                    <div className='text-white text-center md:space-y-7 space-y-2'>
-                        <h5 className='text-xl font-bold'>Hello, We Are Granny</h5>
-                        <h2 className="md:text-5xl text-2xl">Real Cooking, Perfect Taste</h2>
-                        <div>
-                        <button className="btn bg-white">Read more</button>
-                        </div>
-                    </div>
-                </div>
-                <div className=" absolute inset-0 bg-[#2e3130] opacity-70">
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
 
-                </div>
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" className="btn btn-circle">❮</a>
-                    <a href="#slide1" className="btn btn-circle">❯</a>
-                </div>
-            </div>
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+
+  return (
+    <div className=" opacity-90 bg-black  h-[80vh] max-w-screen-xl mx-auto  rounded-xl relative group">
+        <div className="overlay absolute top-0 left-0 w-full h-full bg-black opacity-60 rounded-xl"></div>
+
+
+ <div className='absolute bottom-[35%] md:top-[35%] top-[5%] text-center right-[20%] left-[20%] space-y-3'>
+        <h1 className='text-4xl font-bold text-white'>Welcome to My Restaurant</h1>
+        <p className='text-white'>Discover exquisite flavors and exceptional dining at our restaurant, where passion meets perfection in every dish we serve with love.</p>
+       <Link to="/all-food"><button className='btn mt-2'>Explore more</button></Link>
+    </div>
+
+    <div
+style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+className="w-full h-full bg-center bg-cover duration-500"
+    >
+    </div>
+    {/* Left Arrow */}
+    <div className="hidden group-hover:block absolute top-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer -translate-x-0 translate-y-[-50%] lg:-translate-x-0 lg:left-5">
+      <BsChevronCompactLeft onClick={prevSlide} size={30} />
+    </div>
+    {/* Right Arrow */}
+    <div className="hidden group-hover:block absolute top-[50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer -translate-x-0 translate-y-[-50%] lg:-translate-x-0 lg:right-5">
+      <BsChevronCompactRight onClick={nextSlide} size={30} />
+    </div>
+    <div className="flex -mt-10 justify-center ">
+      {slides.map((slide, slideIndex) => (
+        <div
+          key={slideIndex}
+          onClick={() => goToSlide(slideIndex)}
+          className="text-2xl cursor-pointer"
+        >
+          <RxDotFilled className='text-white' />
         </div>
-        </div>
-
-    );
-};
+      ))}
+    </div>
+  </div>
+  
+  );
+}
 
 export default Banner;
