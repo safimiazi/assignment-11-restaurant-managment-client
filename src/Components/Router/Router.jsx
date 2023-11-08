@@ -40,12 +40,12 @@ const router = createBrowserRouter([
         {
             path: '/all-food',
             element: <AllFood></AllFood>,
-            loader: ()=> fetch('http://localhost:5000/api/v1/productsCount')
+            loader: ()=> fetch('https://restuarent-management.vercel.app/api/v1/productsCount')
         },
         {
           path: '/card-details/:id',
           element: <CardDetails></CardDetails>,
-          loader: ({params})=> fetch(`http://localhost:5000/api/v1/items/${params.id}`)
+          loader: ({params})=> fetch(`https://restuarent-management.vercel.app/api/v1/items/${params.id}`)
           
         },
         {
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
         {
           path: '/purchase/:id',
           element: <PrivateRoute><Purchase></Purchase></PrivateRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/api/v1/items/${params.id}`)
+          loader: ({params})=> fetch(`https://restuarent-management.vercel.app/api/v1/items/${params.id}`)
 
         },
         {
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
         {
           path:'/update-food-items/:id',
           element: <PrivateRoute><UpdateFoodItems></UpdateFoodItems></PrivateRoute>,
-          loader: ({params})=>fetch(`http://localhost:5000/api/v1/products/${params.id}`)
+          loader: ({params})=>fetch(`https://restuarent-management.vercel.app/api/v1/products/${params.id}`)
         }
       ]
     },

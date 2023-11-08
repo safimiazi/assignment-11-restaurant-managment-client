@@ -54,7 +54,7 @@ const Purchase = () => {
 
 
         //for add to cart in the another collection of database
-        fetch('http://localhost:5000/api/v1/cart',{
+        fetch('https://restuarent-management.vercel.app/api/v1/cart',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -71,7 +71,7 @@ const Purchase = () => {
                     icon: "success"
                   });
             //for update count
-            fetch(`http://localhost:5000/api/v1/update-count/${_id}`,{
+            fetch(`https://restuarent-management.vercel.app/api/v1/update-count/${_id}`,{
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

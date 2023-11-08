@@ -18,7 +18,7 @@ const UpdateFoodItems = () => {
 
         const updateItem = { Country, FoodCategory, FoodImage, FoodName, Quantity, Price, ShortDescription, LongDescription }
 
-        fetch(`http://localhost:5000/api/v1/products/${_id}`, {
+        fetch(`https://restuarent-management.vercel.app/api/v1/products/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

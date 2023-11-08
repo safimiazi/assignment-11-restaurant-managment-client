@@ -11,7 +11,7 @@ const MyAddedFood = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/v1/get-added-food?email=${email}`);
+                const response = await fetch(`https://restuarent-management.vercel.app/api/v1/get-added-food?email=${email}`);
                 const result = await response.json();
                 console.log(result);
                 setData(result);

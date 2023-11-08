@@ -24,7 +24,7 @@ const AddFoodItem = () => {
         const LongDescription = form.longDescription.value;
 
         const product = { FoodName, FoodImage, FoodCategory, Quantity, Price, Name,Email, Country, ShortDescription, LongDescription }
-        fetch("http://localhost:5000/api/v1/post-items", {
+        fetch("https://restuarent-management.vercel.app/api/v1/post-items", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

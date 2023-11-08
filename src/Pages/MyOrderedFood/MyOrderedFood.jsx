@@ -9,7 +9,7 @@ const MyOrderedFood = () => {
     const email = user.email
     const [datas, setDatas] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/api/v1/cart?buyerEmail=${email}`)
+        fetch(`https://restuarent-management.vercel.app/api/v1/cart?buyerEmail=${email}`)
         .then(res=>res.json())
         .then(data => setDatas(data))
     },[])
@@ -25,7 +25,7 @@ const MyOrderedFood = () => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/api/v1/cart/${id}`,{
+                fetch(`https://restuarent-management.vercel.app/api/v1/cart/${id}`,{
                     method: 'DELETE'
                 })
                 .then(res => res.json())

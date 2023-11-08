@@ -20,7 +20,7 @@ const AllFood = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/v1/items?page=${currentPage}&size=${itemsPerPage}`);
+                const response = await fetch(`https://restuarent-management.vercel.app/api/v1/items?page=${currentPage}&size=${itemsPerPage}`);
                 const data = await response.json();
 
                 setFullData(data);

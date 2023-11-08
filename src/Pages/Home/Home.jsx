@@ -4,6 +4,7 @@ import Banner from "../../Components/Banner/Banner";
 import CardSection from "../../Components/CardSection/CardSection";
 import Contact from "../../Components/Contact/Contact";
 import Gallery from "../../Components/Gallery/Gallery";
+import ImgSection from "../../Components/ImgSection/ImgSection";
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
             <CardSection></CardSection>
             <About></About>
             <Gallery></Gallery>
+            <ImgSection></ImgSection>
             <Contact></Contact>
         </div>
     );

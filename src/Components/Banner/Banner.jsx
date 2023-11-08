@@ -5,7 +5,7 @@ const Banner = () => {
         <div className="max-w-screen-xl mx-auto md:px-10">
             <div className="carousel w-full rounded-lg">
             <div id="slide1" className="carousel-item relative w-full">
-                <img src="/src/assets/images/banner1.png" className="w-full" />
+                <img src="/src/assets/images/banner1.png" className="w-full h-full" />
                 <div className="absolute rounded-xl flex items-center left-[25%] right-[25%] z-10 h-full  top-0 ">
                     <div className='text-white text-center md:space-y-7 space-y-2'>
                         <h5 className='text-xl font-bold'>Hello, We Are Granny</h5>
