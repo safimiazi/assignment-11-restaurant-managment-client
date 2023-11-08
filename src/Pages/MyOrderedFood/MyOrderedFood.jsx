@@ -1,13 +1,15 @@
-import { useLoaderData } from "react-router-dom";
 import OrderedCard from "../../Components/OrderedCard/OrderedCard";
 import Swal from "sweetalert2";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 
 const MyOrderedFood = () => {
+    const {user} = useContext(AuthContext)
+    const email = user.email
     const [datas, setDatas] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/api/v1/cart')
+        fetch(`http://localhost:5000/api/v1/cart?buyerEmail=${email}`)
         .then(res=>res.json())
         .then(data => setDatas(data))
     },[])
