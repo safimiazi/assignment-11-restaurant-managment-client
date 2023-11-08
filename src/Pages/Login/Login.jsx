@@ -4,7 +4,6 @@
 import { useContext } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import axios from "axios";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 
@@ -29,19 +28,7 @@ const Login = () => {
               toast.success("Login Successfully");
               navigate(location?.state ? location.state : '/')
 
-              //step 2 {jwt}
-              //get access token
-            //   const user = {email}
-            //   axios.post('', user, {withCredentials:true})
-            //   .then(res => {
-            //     console.log(res.data);
-            //     if(res.data.success){
-            //         navigate("/");
-            //     }
-            //   })
-            //  .then(error => {
-            //     console.log(error);
-            //  })
+            
 
 
 
@@ -60,6 +47,8 @@ const Login = () => {
         signInWithGoogle()
         .then(result => {
             console.log(result.user)
+            navigate(location?.state ? location.state : '/')
+
         })
         .catch(error => {
             console.log(error.message);
@@ -71,6 +60,8 @@ const Login = () => {
         signInWithGithub()
         .then(result => {
             console.log(result.user)
+            navigate(location?.state ? location.state : '/')
+
         })
         .catch(error => {
             console.log(error.message);
