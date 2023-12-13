@@ -63,9 +63,9 @@ const AddFoodItem = () => {
             <Helmet>
             <title>Granny|add food item</title>
             </Helmet>
-            <div className="min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="card  flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="min-w-full bg-base-200">
+                <div className=" flex-col lg:flex-row-reverse">
+                    <div className="   w-full  flex items-center justify-center self-center shadow-2xl">
                         <form onSubmit={handleForm} className="card-body">
                             <div className=" grid md:grid-cols-2 grid-cols-1 gap-2">
                                 <div className="form-control">
@@ -130,7 +130,7 @@ const AddFoodItem = () => {
                                 <textarea type="text" name="longDescription" placeholder="longDescription" className="input input-bordered" required />
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Add Item</button>
+                                <button className="btn btn-neutral">Add Item</button>
                             </div>
                         </form>
                     </div>

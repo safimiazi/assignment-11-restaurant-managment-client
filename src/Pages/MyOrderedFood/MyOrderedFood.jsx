@@ -7,12 +7,15 @@ import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 const MyOrderedFood = () => {
     const {user} = useContext(AuthContext)
     const email = user.email
+    console.log("this is mohi", email);
     const [datas, setDatas] = useState([])
     useEffect(()=>{
-        fetch(`https://restuarent-management.vercel.app/api/v1/cart?buyerEmail=${email}`)
+        fetch(`https://restuarent-management.vercel.app/api/v1/cart?buyerEmail=${email}`,{
+           credentials: 'include' 
+        })
         .then(res=>res.json())
         .then(data => setDatas(data))
-    },[])
+    },[email])
    
     const handleDelete = id => {
         Swal.fire({

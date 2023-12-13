@@ -40,7 +40,7 @@ const Navbar = () => {
                         {NavList}
                     </ul>
                 </div>
-                <img src="/src/assets/images/logo-dark.png" alt="" />
+                <img src="https://i.ibb.co/XX93fzL/logo-dark.png" alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

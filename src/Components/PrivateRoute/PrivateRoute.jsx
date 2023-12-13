@@ -1,15 +1,19 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import {Navigate, useLocation } from "react-router";
+import { useNavigate, useLocation } from "react-router";
+import Lottie from "lottie-react";
+import loadingAnimation from "../../assets/RCgn2Io7Zy.json";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
-  const {pathname} = useLocation()
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
   console.log(pathname);
+
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-[90vh] ">
-       <h1 className="text-4xl text-bold">Loading...</h1>
+      <div className="flex justify-center items-center h-[90vh]">
+        <Lottie animationData={loadingAnimation}></Lottie>
       </div>
     );
   }
@@ -18,7 +22,8 @@ const PrivateRoute = ({ children }) => {
     return children;
   }
 
-  return <Navigate  state={pathname} to={'/login'} replace></Navigate>
+  navigate('/login', { state: { from: pathname }, replace: true });
+  return null; // You can return null or any loading indicator while navigating.
 };
 
 export default PrivateRoute;

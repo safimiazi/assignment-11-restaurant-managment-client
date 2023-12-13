@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 
 const UpdateFoodItems = () => {
+    const {user} = useContext(AuthContext)
+    const email =user.email
     const { _id, Country, Email, FoodCategory, FoodImage, FoodName, LongDescription, Name, Price, Quantity, ShortDescription } = useLoaderData()
     const handleUpdate = e => {
         e.preventDefault()
@@ -16,7 +20,7 @@ const UpdateFoodItems = () => {
         const ShortDescription = form.description.value;
         const LongDescription = form.longDescription.value;
 
-        const updateItem = { Country, FoodCategory, FoodImage, FoodName, Quantity, Price, ShortDescription, LongDescription }
+        const updateItem = { Country,email,  FoodCategory, FoodImage, FoodName, Quantity, Price, ShortDescription, LongDescription }
 
         fetch(`https://restuarent-management.vercel.app/api/v1/products/${_id}`, {
             method: 'PATCH',

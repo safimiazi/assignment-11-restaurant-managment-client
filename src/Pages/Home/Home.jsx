@@ -5,6 +5,7 @@ import CardSection from "../../Components/CardSection/CardSection";
 import Gallery from "../../Components/Gallery/Gallery";
 import ImgSection from "../../Components/ImgSection/ImgSection";
 import FaQuestion from "../../Components/FaQuestion/FaQuestion";
+import Reviews from "../../Components/Reviews/Reviews";
 
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
             <Gallery></Gallery>
             <ImgSection></ImgSection>
             <FaQuestion></FaQuestion>
+            <Reviews></Reviews>
         </div>
     );
 };

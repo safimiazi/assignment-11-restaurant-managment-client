@@ -1,8 +1,8 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* live link: https://restuarent-management.vercel.app/
+* my project name: restaurant management website
+* 5  Features----
+  - User can add product.
+  - User can add product.
+  - User can buy product.
+  - The user can see the product that he has purchased and User will not be able to buy his/her added product.
+  - Featured or top-selling food items to grab the user's attention.
